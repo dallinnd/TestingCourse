@@ -1,0 +1,26 @@
+/* CSS to host on your GitHub repo */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent vertical scrolling on the body */
+}
+
+.course-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; /* Enforces the page locking */
+    height: 100vh;
+    width: 100vw;
+    -webkit-overflow-scrolling: touch; /* Smooth iOS scrolling */
+}
+
+.course-page {
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start; /* Snaps exactly to the beginning of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allows long text content to scroll vertically *within* the page */
+}
